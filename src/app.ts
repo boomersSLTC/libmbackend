@@ -4,7 +4,7 @@ import { graphqlHTTP } from 'express-graphql';
 import schema from './graphql/schema';
 import mongoose from 'mongoose';
 import { Client } from 'pg';
-
+import cors from 'cors';
 // load ENVIRONMENT VARIABLES
 try {
     const configOutput: DotenvConfigOutput = dotenv.config();
@@ -20,7 +20,7 @@ const app: Application = express();
 
 // use JSON parse bodyParser middleware
 app.use(express.json());
-
+app.use(cors)
 // avoid CORS
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
