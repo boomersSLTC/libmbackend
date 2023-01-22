@@ -2,15 +2,15 @@
   "name": "backend",
   "version": "0.1.0",
   "private": true,
-  "main": "src/app.js",
+  "main": "src/app.ts",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon src/app.ts",
     "build": "tsc -p .",
     "lint": "eslint \"src/**/*.ts\""
   },
-  "author": "Anindya Kundu",
-  "license": "MIT",
+  "author": "Boomers",
+  "license": "SLTC",
   "dependencies": {
     "amqplib": "^0.6.0",
     "bcryptjs": "^2.4.3",
